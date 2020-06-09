@@ -1,0 +1,11 @@
+{
+    "id": "argon",
+    "name": "Argon",
+    "description": "Theme for Azuriom made with Argon Design System.",
+    "version": "1.0.0",
+    "url": "https://azuriom.com/market/resources/21",
+    "authors": [
+        "Azuriom"
+    ],
+    "apiId": 21
+}

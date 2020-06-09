@@ -1,0 +1,17 @@
+{
+    "show_welcome_message": "on",
+    "welcome_message": "Lorem ipsum",
+    "footer_title": "Lorem ipsum",
+    "footer_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt, justo sit amet sagittis fermentum, est purus vestibulum risus, vel lacinia libero ligula non erat.",
+    "footer_links": [
+        {
+            "name": "Azuriom",
+            "value": "https://azuriom.com/"
+        },
+    ],
+    "footer_social_twitter": "https://twitter.com/Azuriom",
+    "footer_social_discord": "https://discord.com/invite/VnUp9Wd",
+    "footer_social_youtube": "https://www.youtube.com/channel/UCPS-Kh1ycTuL-4vQhx8j-7Q",
+    "footer_social_teamspeak": "ts3server://ts.ascentia.fr?port=9987",
+    "footer_social_instagram": "https://www.instagram.com"
+}
