@@ -7,15 +7,33 @@
          style="background: url('{{ setting('background') ? image_url(setting('background')) : 'https://via.placeholder.com/2000x500' }}') center / cover no-repeat">
         @if(theme_config('show_welcome_message') === 'on')
             <div class="col-md-4 text-center" style="background-color: rgba(0, 0, 0, 0.6); border: 8px solid black; border-radius: 15px">
-                <h1 class="mb-4 text-light">{{ theme_config('welcome_message') }}</h1>
+                <h1 class="mb-4 text-light">{{ $message }}</h1>
 
-                @if($server && $server->isOnline())
-                    <h2 class="mb-4 text-light">{{ trans_choice('messages.server.online', $server->getOnlinePlayers()) }}</h2>
+                <div>
+                    @foreach($servers as $server)
+                        <div>
+                            {{ $server->name }}
 
-                    <h3 class="text-light">{{ $server->address }}</h3>
-                @else
-                    <h2 class="text-light">{{ trans('messages.server.offline') }}</h2>
-                @endif
+                            @if ($server->isOnline())
+                                <h2 class="mb-4 text-light"
+                                    {{ trans_choice('messages.server.total', $server->getOnlinePlayers(), [
+                                            'max' => $server->getMaxPlayers(),
+                                    ]) }}
+                                </h2>
+                            @else
+                                <h2 class="text-light">{{ trans('messages.server.offline') }}</h2>
+                            @endif
+
+                            @if($server->joinUrl())
+                                <a href="{{ $server->joinUrl() }}" class="btn btn-primary">
+                                    {{ trans('messages.server.join') }}
+                                </a>
+                            @else
+                                <p class="card-text">{{ $server->fullAddress() }}</p>
+                            @endif
+                        </div>
+                    @endforeach
+                </div>
             </div>
         @endif
     </div>

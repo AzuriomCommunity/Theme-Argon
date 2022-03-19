@@ -59,19 +59,6 @@
                     <label class="custom-control-label" for="welcomeMessageSwitch">{{ trans('theme::argon.config.show_welcome_message') }}</label>
                 </div>
 
-                <div id="welcomeMessageGroup" class="{{ $showWelcomeMessage ? 'show' : 'collapse' }}">
-                    <div class="card card-body mb-2">
-                        <div class="form-group">
-                            <label for="welcomeMessageLink">{{ trans('theme::argon.config.welcome_message') }}</label>
-                            <input type="text" class="form-control @error('welcome_message') is-invalid @enderror" id="welcomeMessageLink" name="welcome_message" value="{{ old('welcome_message', theme_config('welcome_message')) }}">
-
-                            @error('welcome_message')
-                            <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
-                            @enderror
-                        </div>
-                    </div>
-                </div>
-
                 <div class="form-group">
                     <label for="footerTitleInput">{{ trans('theme::argon.config.footer_title') }}</label>
                     <input type="text" class="form-control @error('footer_title') is-invalid @enderror" id="footerTitleInput" name="footer_title" value="{{ old('footer_title', theme_config('footer_title')) }}">
@@ -89,17 +76,6 @@
                     <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                     @enderror
                 </div>
-
-                @foreach(['twitter', 'youtube', 'discord', 'teamspeak', 'instagram'] as $social)
-                    <div class="form-group">
-                        <label for="{{ $social }}Input">{{ trans('theme::argon.config.'.$social) }}</label>
-                        <input type="text" class="form-control @error('footer_social_'.$social) is-invalid @enderror" id="{{ $social }}Input" name="footer_social_{{ $social }}" value="{{ old('footer_social_'.$social, theme_config('footer_social_'.$social)) }}">
-
-                        @error('footer_social_'.$social)
-                        <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
-                        @enderror
-                    </div>
-                @endforeach
 
                 <label>{{ trans('theme::argon.config.footer_links') }}</label>
 

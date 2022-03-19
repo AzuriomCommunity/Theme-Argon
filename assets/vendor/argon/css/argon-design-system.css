@@ -1,6 +1,6 @@
 /*!
 =========================================================
-*  Argon Design System  - v 1.2.0
+*  Argon Design System  - v 1.2.2
 =========================================================
 
 * Product Page:  https://www.creative-tim.com/product/argon-design-system
@@ -19,7 +19,7 @@ Coded by www.creative-tim.com
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+ :root {
   --blue: #5e72e4;
   --indigo: #5603ad;
   --purple: #8965e0;
@@ -18281,120 +18281,42 @@ a.btn-icon-only {
 }
 
 .btn-github {
-     color: #fff;
-     background-color: #222222;
-     border-color: #222222;
-     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
- }
+  color: #fff;
+  background-color: #222222;
+  border-color: #222222;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
 
 .btn-github:hover {
-    color: #fff;
-    background-color: #222222;
-    border-color: #222222;
+  color: #fff;
+  background-color: #222222;
+  border-color: #222222;
 }
 
 .btn-github:focus,
 .btn-github.focus {
-    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08), 0 0 0 0 rgba(34, 34, 34, 0.5);
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08), 0 0 0 0 rgba(34, 34, 34, 0.5);
 }
 
 .btn-github.disabled,
 .btn-github:disabled {
-    color: #fff;
-    background-color: #222222;
-    border-color: #222222;
+  color: #fff;
+  background-color: #222222;
+  border-color: #222222;
 }
 
 .btn-github:not(:disabled):not(.disabled):active,
 .btn-github:not(:disabled):not(.disabled).active,
 .show>.btn-github.dropdown-toggle {
-    color: #fff;
-    background-color: #090909;
-    border-color: #222222;
+  color: #fff;
+  background-color: #090909;
+  border-color: #222222;
 }
 
 .btn-github:not(:disabled):not(.disabled):active:focus,
 .btn-github:not(:disabled):not(.disabled).active:focus,
 .show>.btn-github.dropdown-toggle:focus {
-    box-shadow: none, 0 0 0 0 rgba(34, 34, 34, 0.5);
-}
-
-.btn-discord {
-    color: #fff;
-    background-color: #7289DA;
-    border-color: #7289DA;
-    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-}
-
-.btn-discord:hover {
-    color: #fff;
-    background-color: #7289DA;
-    border-color: #7289DA;
-}
-
-.btn-discord:focus,
-.btn-discord.focus {
-    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08), 0 0 0 0 rgba(34, 34, 34, 0.5);
-}
-
-.btn-discord.disabled,
-.btn-discord:disabled {
-    color: #fff;
-    background-color: #7289DA;
-    border-color: #7289DA;
-}
-
-.btn-discord:not(:disabled):not(.disabled):active,
-.btn-discord:not(:disabled):not(.disabled).active,
-.show>.btn-discord.dropdown-toggle {
-    color: #fff;
-    background-color: #4f609a;
-    border-color: #7289DA;
-}
-
-.btn-discord:not(:disabled):not(.disabled):active:focus,
-.btn-discord:not(:disabled):not(.disabled).active:focus,
-.show>.btn-discord.dropdown-toggle:focus {
-    box-shadow: none, 0 0 0 0 rgba(34, 34, 34, 0.5);
-}
-
-.btn-teamspeak {
-    color: #fff;
-    background-color: #1c2537;
-    border-color: #1c2537;
-    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-}
-
-.btn-teamspeak:hover {
-    color: #fff;
-    background-color: #1c2537;
-    border-color: #1c2537;
-}
-
-.btn-teamspeak:focus,
-.btn-teamspeak.focus {
-    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08), 0 0 0 0 rgba(34, 34, 34, 0.5);
-}
-
-.btn-teamspeak.disabled,
-.btn-teamspeak:disabled {
-    color: #fff;
-    background-color: #1c2537;
-    border-color: #1c2537;
-}
-
-.btn-teamspeak:not(:disabled):not(.disabled):active,
-.btn-teamspeak:not(:disabled):not(.disabled).active,
-.show>.btn-teamspeak.dropdown-toggle {
-    color: #fff;
-    background-color: #090909;
-    border-color: #1c2537;
-}
-
-.btn-teamspeak:not(:disabled):not(.disabled):active:focus,
-.btn-teamspeak:not(:disabled):not(.disabled).active:focus,
-.show>.btn-teamspeak.dropdown-toggle:focus {
-    box-shadow: none, 0 0 0 0 rgba(34, 34, 34, 0.5);
+  box-shadow: none, 0 0 0 0 rgba(34, 34, 34, 0.5);
 }
 
 .card {
@@ -19556,6 +19478,10 @@ textarea[resize="horizontal"] {
   position: absolute;
   z-index: 1050;
   width: 100%;
+}
+
+.navbar.navbar-main {
+  z-index: 3;
 }
 
 .navbar-nav .nav-link {

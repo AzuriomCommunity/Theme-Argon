@@ -36,7 +36,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-    <link href="{{ asset('vendor/fontawesome/css/all.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ theme_asset('vendor/argon/css/argon-design-system.min.css') }}" rel="stylesheet">
@@ -67,12 +67,10 @@
         <h4 class="mb-0 font-weight-light">{!! theme_config('footer_description') !!}</h4>
       </div>
       <div class="col-lg-6 text-lg-center btn-wrapper">
-          @foreach(['twitter', 'youtube', 'instagram', 'discord', 'teamspeak'] as $social)
-              @if($socialLink = theme_config("footer_social_{$social}"))
-                  <a href="{{ $socialLink }}" target="_blank" rel="noreferrer noopener" class="btn btn-icon-only btn-{{ $social }} rounded-circle">
-                      <span class="btn-inner--icon"><i class="fab fa-{{ $social }} fa-lg"></i></span>
-                  </a>
-              @endif
+          @foreach(social_links() as $link)
+              <a href="{{ $link->value }}" title="{{ $link->title }}" target="_blank" rel="noopener noreferrer" class="btn btn-icon-only rounded-circle">
+                  <span class="btn-inner--icon"><i class="{{ $link->icon }} fa-lg" style="color: {{ $link->color }}"></i></span>
+              </a>
           @endforeach
       </div>
     </div>
