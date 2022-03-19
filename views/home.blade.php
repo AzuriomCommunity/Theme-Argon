@@ -15,7 +15,7 @@
                             {{ $server->name }}
 
                             @if ($server->isOnline())
-                                <h2 class="mb-4 text-light"
+                                <h2 class="mb-4 text-light">
                                     {{ trans_choice('messages.server.total', $server->getOnlinePlayers(), [
                                             'max' => $server->getMaxPlayers(),
                                     ]) }}

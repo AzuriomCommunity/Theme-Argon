@@ -25,8 +25,8 @@
     <link rel="shortcut icon" href="{{ favicon() }}">
 
     <!-- Scripts -->
-    <script src="{{ asset('vendor/jquery/jquery.min.js') }}" defer></script>
-    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}" defer></script>
+    <script src="{{ theme_asset('vendor/jquery/jquery.min.js') }}" defer></script>
+    <script src="{{ theme_asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}" defer></script>
     <script src="{{ asset('vendor/axios/axios.min.js') }}" defer></script>
     <script src="{{ asset('js/script.js') }}" defer></script>
 
@@ -68,7 +68,7 @@
       </div>
       <div class="col-lg-6 text-lg-center btn-wrapper">
           @foreach(social_links() as $link)
-              <a href="{{ $link->value }}" title="{{ $link->title }}" target="_blank" rel="noopener noreferrer" class="btn btn-icon-only rounded-circle">
+              <a href="{{ $link->value }}" title="{{ $link->title }}" target="_blank" rel="noopener noreferrer" class="btn btn-icon-only rounded-circle bg-white">
                   <span class="btn-inner--icon"><i class="{{ $link->icon }} fa-lg" style="color: {{ $link->color }}"></i></span>
               </a>
           @endforeach
